@@ -1,0 +1,8 @@
+<h1>Costumes#index</h1>
+<p>Find me in app/views/costumes/index.html.erb</p>
+
+<div class="container">
+<p><% @costumes.each do |costume| %></p>
+<%= link_to "#{costume.name}" %>
+<% end %>
+</div>
