@@ -1,4 +1,4 @@
 class Booking < ApplicationRecord
-  belongs_to :costume_id
-  belongs_to :locataire_id
+  belongs_to :costume
+  belongs_to :locataire, class_name: 'User'
 end
