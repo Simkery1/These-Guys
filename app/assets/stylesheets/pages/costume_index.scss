@@ -1,9 +1,33 @@
+
+
+.card_link {
+  color: black;
+
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+
+.index-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.filter {
+  border: solid;
+  height: 700px;
+  width: 300px;
+
+}
 .cards_index {
-  text-decoration: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  margin: 50px;
 }
+
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {

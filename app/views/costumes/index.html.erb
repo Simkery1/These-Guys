@@ -1,12 +1,21 @@
 <h1 class="text-center">Nos costumes !</h1>
 <p></p>
 
+<div class="index-container">
+  <div class="filter">
+  <h2>Futur filtres</h2>
+  </div>
 
-  <div class="cards_index">
+    <div class="cards_index">
       <% @costumes.each do |costume| %>
-      <%= link_to costume_path(costume.id) do %>
+      <%= link_to costume_path(costume.id), class: 'card_link' do %>
         <div class="card-category" style="background-size: contain; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),  url('<%= costume.photo %>')"><%= costume.name %>
+        </div>
+        <div class="description_product">
+         <p><%=costume.description %></p>
         </div>
          <% end %>
       <% end %>
+
   </div>
+</div>
