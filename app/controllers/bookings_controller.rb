@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   skip_before_action :authenticate_user!
-  before_action :set_booking, only: [:index]
+  # before_action :set_booking, only: [:index]
 
   def index
     @bookings = Booking.all
@@ -13,6 +13,6 @@ class BookingsController < ApplicationController
   private
 
   def set_booking
-    @booking = Booking.find(params[1])
+    @booking = Booking.find(params[:id])
   end
 end
