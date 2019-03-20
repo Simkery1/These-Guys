@@ -1,0 +1,30 @@
+<div class="costume-show">
+  <div class ="costume-picture">
+  <p><%= cl_image_tag @costume.photo, height: 600, width: 350, crop: :fill %> </p>
+  </div>
+
+  <div class="costume-details">
+
+    <div class="costume-description">
+      <div class= "name-price"> <h1><%= @costume.name %></h1>
+        <h5> 25€/day </h5>
+      </div>
+      <p> <%= @costume.description %></p>
+    </div>
+    <div class="costume-informations">
+      <p>TAILLE</p>
+      <p>Etat </p>
+      <p>DATE</p>
+    </div>
+    <div class="costume-ranking">
+      <div class="owner-informations-show">
+      <p>Owner Name</p>
+      </div>
+      <div class="upload-button">
+      <a class="btn btn-flat show" href="#">Book now !</a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
