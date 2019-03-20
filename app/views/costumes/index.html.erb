@@ -2,12 +2,11 @@
 <p></p>
 
 
-  <div class="cards">
-    <div class="col-sm" >
+  <div class="cards_index">
       <% @costumes.each do |costume| %>
+      <%= link_to costume_path(costume.id) do %>
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),  url('<%= costume.photo %>')"><%= costume.name %>
         </div>
+         <% end %>
       <% end %>
-      </div>
-    </div>
   </div>
