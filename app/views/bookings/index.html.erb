@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h1>Cocktails</h1>
+        <ul class="mt-3">
+          <% @bookings.each do |booking| %>
+            <%= link_to booking_path(booking) do %>
+              <div class="card-product">
+                  <%= cl_image_tag booking.photo, alt: "Photo booking", height: 100, crop: :fill %>
+                  <div class="card-product-infos">
+                    <h2>  <%= booking.name%></h2>
+                    <p>Product description with <strong>relevant info</strong> only.</p>
+                  </div>
+              </div>
+            <% end %>
+          <% end %>
+        </ul>
+    </div>
+  </div>
+</div>
