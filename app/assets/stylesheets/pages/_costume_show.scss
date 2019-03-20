@@ -1,11 +1,11 @@
 .costume-show {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-item: center;
 }
 
 .costume-picture {
-  margin-left: 60px;
+  margin-left: 250px;
   margin-right: 60px;
   margin-top: 70px;
   width: 300px;
@@ -14,23 +14,52 @@
 }
 
 .costume-details {
-  margin-right: 60px;
+  margin-right: 250px;
   margin-top: 70px;
   width: 700px;
   height:  600px;
   display: flex;
   flex-direction: column;
+  margin-left: 60px;
+}
+
+.name-price {
+display:flex;
+justify-content: space-between;
 }
 
 .costume-description {
-
-
 }
 .costume-informations {
-
-
+  margin-top: 80px;
+  height: 200px;
+  border-top: 2px solid grey;
 }
 .costume-ranking {
+  height: 200px;
+  border-top: 2px solid grey;
+}
 
+.btn-flat.show {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #1EDD88;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover.show {
+  background: #1BCB7F;
+  color: white;
+}
+
+.costume-informations-show {
+
+}
+
+.upload-button {
+  margin-top: 100px;
+  display:flex;
+  justify-content: flex-end;
 
 }
