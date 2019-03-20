@@ -1,8 +1,8 @@
-<div class="banner home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<div class="banner home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_url("bannerpicture.jpg") %>');">
   <div class="container">
     <h1> <strong>These Guys </strong> </h1>
     <p> Disguise for every events </p>
-    <a class="btn btn-flat" href="#">Voir le site</a>
+    <%= link_to "Voir le site", costumes_path, class:"btn btn-flat" %>
   </div>
 </div>
 
@@ -24,6 +24,9 @@
    <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
     Dinner
   </div>
+
+
+
 
 </div>
 

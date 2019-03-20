@@ -6,9 +6,8 @@ class CostumesController < ApplicationController
   end
 
   def create
-  end
+    @costume = Costume.new(costume_params)
 
-  def new
   end
 
 end
