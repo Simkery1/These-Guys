@@ -1,1 +1,20 @@
-<%= cl_image_tag user.photo %>
+<div class="banner">
+  <div class="profile-container">
+    <div>
+      <%= cl_image_tag current_user.photo, class: "avatar-large" %>
+    </div>
+    <div>
+      <%= current_user.user_name %>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel elementum mi. Ut maximus nibh sapien, eget tristique dui posuere eu. Sed vel velit volutpat, hendrerit leo a, sollicitudin leo. Nam maximus enim eget magna porta sollicitudin. Nam viverra ipsum nisi, vitae interdum quam faucibus quis.</p>
+  </div>
+</div>
+<div class="cards">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    Owner
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+    Tenant
+  </div>
+</div>
