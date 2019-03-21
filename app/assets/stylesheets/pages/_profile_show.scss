@@ -3,20 +3,21 @@
   justify-content: center;
   align-item: center;
 }
-// FLEXBOX 1
+// BOX 1
 .profile-info {
   display: flex;
   flex-direction: column;
   margin: 16px;
   background-color: white;
-  padding: 16px;
+  padding: 24px;
+  max-height: 400px;
 }
 
 .profile-name {
   text-align: center;
   margin: 16px;
 }
-// FLEXBOX 2
+// BOX 2
 .profile-details {
   margin: 16px;
   display: flex;
@@ -26,7 +27,7 @@
 .profile-description {
   text-align: left;
   background-color: white;
-  padding: 16px;
+  padding: 32px;
   margin-bottom: 8px;
 }
 
@@ -45,12 +46,13 @@
 
 .notes {
   display: flex;
+  justify-content: center;
 }
 .card-container {
   background-color: white;
   padding: 16px;
 }
-// FLEXBOX 3
+// BOX 3
 
 .card-category {
   width: 370px;
