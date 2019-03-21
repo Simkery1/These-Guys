@@ -14,7 +14,5 @@ class CostumesController < ApplicationController
 
   def create
     @costume = Costume.new(costume_params)
-
   end
-
 end

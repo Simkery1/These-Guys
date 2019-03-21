@@ -1,21 +1,19 @@
-<div class="booking-screen">
-<% @bookings.each do |booking| %>
-  <div class="card-product">
-    <%= cl_image_tag booking.costume.photo, alt: "Photo costume", height: 100, crop: :fill %>
-      <div class="card-product-infos">
-        <h2><%= booking.costume.name %></h2>
-        <p><%= booking.message%></p>
-      </div>
-      <div class="booking">
-        <p><%= booking.status %></p>
-        <%= link_to accept_owner_booking_path(booking), method: :patch do  %>
-        <div class="booking-btn" style="background-image: url('<%= image_url("validation.png") %>');"></div>
-      <% end %>
-      <%= link_to decline_owner_booking_path(booking), method: :patch do %>
-        <div class="booking-btn" style="background-image: url('<%= image_url("cross.png") %>');"></div>
-      <% end %>
-      </div>
+<div class="booking-container">
+  <div class="booking-screen">
+    <%= link_to "Mes costumes", root_path, class:"btn btn-danger btn-sm my-booking" %>
+        <div class="card-product">
+            <div class="row">
+          <% @bookings.each do |booking| %>
+              <%= cl_image_tag booking.costume.photo, alt: "Photo costume", height: 100, crop: :fill %>
+                <div class="card-product-infos">
+                   <h2><%= booking.costume.name %></h2>
+                   <p><%= booking.message%></p>
+                </div>
+                <div class="booking">
+                  <p><%= booking.status %></p>
+                </div>
+        </div>
+    <% end %>
   </div>
-<% end %>
-<%= link_to "Home page", root_path, class:"btn btn-flat" %>
 </div>
+

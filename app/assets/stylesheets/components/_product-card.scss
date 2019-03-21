@@ -6,10 +6,11 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  align-items: center;
+  align-items: left;
   padding: 10px;
-  margin: 10px;
+  margin: 10px auto;
   border-radius: 4px;
+  width: 100%;
   justify-content: space-between;
 }
 
@@ -36,16 +37,6 @@
   margin-top: 8px;
 }
 
-.card-product .card-product-infos {
-  padding: 16px;
-}
 
-.booking-btn {
-  width: 40px;
-  height: 40px;
-  background-size: cover;
-  border: 1px solid black;
-  display: flex;
-  justify-content: flex-end;
-}
+
 
