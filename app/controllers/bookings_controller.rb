@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   skip_before_action :authenticate_user!
-  before_action :set_booking, only: [:index]
+  # before_action :set_booking, only: [:index]
 
   def index
     @bookings = Booking.all
