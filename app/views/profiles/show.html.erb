@@ -1,20 +1,49 @@
-<div class="banner">
+<div class="container">
   <div class="profile-container">
-    <div>
-      <%= cl_image_tag current_user.photo, class: "avatar-large" %>
-    </div>
-    <div>
-      <%= current_user.user_name %>
-    </div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel elementum mi. Ut maximus nibh sapien, eget tristique dui posuere eu. Sed vel velit volutpat, hendrerit leo a, sollicitudin leo. Nam maximus enim eget magna porta sollicitudin. Nam viverra ipsum nisi, vitae interdum quam faucibus quis.</p>
-  </div>
-  <div class="cards">
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      Owner
+    <div class="profile-info">
+      <div class="profile-avatar">
+        <%= cl_image_tag current_user.photo, class: "avatar-bordered-large" %>
+      </div>
+      <div class="profile-name">
+        <h1><%= current_user.user_name %></h1>
+      </div>
+      <!-- <div class="last-costume">
+        <p>Dernier costume loué</p>
+        <%= image_tag "radar.jpg", class: "lastcostume"%>
+      </div> -->
+      <div class="notes">
+        <h3>Note : 9/10</h3>
+      </div>
     </div>
 
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-      Tenant
+    <div class="profile-details">
+      <div class="profile-description">
+        <div class= "profile-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel elementum mi. Ut maximus nibh sapien, eget tristique dui posuere eu. Sed vel velit volutpat, hendrerit leo a, sollicitudin leo. Nam maximus enim eget magna porta sollicitudin. Nam viverra ipsum nisi, vitae interdum quam faucibus quis.</p>
+        </div>
+      </div>
+
+
+      <div class="card-container">
+        <div class="onglet">
+          <%= link_to "Mes costumes", costumes_path, class:"btn btn-danger" %>
+          <%= link_to "Mes locations", costumes_path, class:"btn btn-danger" %>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="card-category" style="background-image: url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)"></div>
+          </div>
+          <div class="col-6">
+            <div class="card-category" style="background-image: url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)"></div>
+          </div>
+          <div class="col-6">
+            <div class="card-category" style="background-image: url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+
+

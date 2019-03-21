@@ -1,0 +1,60 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-item: center;
+}
+// FLEXBOX 1
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+  background-color: white;
+  padding: 16px;
+}
+
+.profile-name {
+  text-align: center;
+  margin: 16px;
+}
+// FLEXBOX 2
+.profile-details {
+  margin: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile-description {
+  text-align: left;
+  background-color: white;
+  padding: 16px;
+  margin-bottom: 8px;
+}
+
+.profile-card {
+  background-color: red;
+  padding: 16px;
+  display: grid;
+  grid-template-column: 1fr 1fr 1fr 1fr;
+  grid-grap: 16px;
+}
+
+.lastcostume {
+  max-width:100%;
+  max-height:100%;
+}
+
+.card-container {
+  background-color: white;
+  padding: 16px;
+}
+// FLEXBOX 3
+
+.card-category {
+  width: 370px;
+  margin: 10px;
+}
+
+.onglet {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
