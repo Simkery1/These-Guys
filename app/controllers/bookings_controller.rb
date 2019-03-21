@@ -1,9 +1,8 @@
 class BookingsController < ApplicationController
   skip_before_action :authenticate_user!
-  # before_action :set_booking, only: [:index]
 
   def index
-    @bookings = Booking.all
+    @bookings = current_user.bookings
   end
 
   def new
@@ -12,12 +11,5 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-
-  end
-
-  private
-
-  def set_booking
-    @booking = Booking.find(params[:id])
   end
 end
