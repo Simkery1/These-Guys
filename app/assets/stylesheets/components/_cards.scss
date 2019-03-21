@@ -1,5 +1,6 @@
 .cards {
   display: grid;
+  flex-wrap: wrap;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
   margin-left: 60px;
