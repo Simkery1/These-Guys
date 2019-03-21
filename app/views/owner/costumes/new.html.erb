@@ -1,0 +1,16 @@
+<div>
+  <%= simple_form_for [:owner, @costume] do |f| %>
+  <%= f.input :name, label: 'Costume name' %>
+
+  <%= f.input :description, as: :text %>
+  <%= f.input :price_per_day %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+  <%= cl_image_tag @costume.photo, height: 300, width: 400, crop: :fill %>
+
+
+  <%= f.button :submit, :class => "primary pull-left" %>
+  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
+  <% end %>
+
+</div>
