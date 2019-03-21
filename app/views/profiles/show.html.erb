@@ -26,19 +26,18 @@
 
       <div class="card-container">
         <div class="onglet">
-          <%= link_to "Mes costumes", costumes_path, class:"btn btn-danger" %>
-          <%= link_to "Mes locations", costumes_path, class:"btn btn-danger" %>
+          <h2>Mes costumes</h2>
+          <%= link_to "Mes locations", owner_bookings_path, class:"btn btn-danger" %>
         </div>
         <div class="row">
           <div class="col-6">
+             <% current_user.costumes.each do |costume| %>
+          <div class="col-6">
+
+            <%= cl_image_tag costume.photo, crop: :fill, class: "card-category"%>
             <div class="card-category" style="background-image: url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)"></div>
           </div>
-          <div class="col-6">
-            <div class="card-category" style="background-image: url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)"></div>
-          </div>
-          <div class="col-6">
-            <div class="card-category" style="background-image: url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-          </div>
+          <% end %>
         </div>
       </div>
     </div>
