@@ -1,34 +1,52 @@
-<div class="banner home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_url("bannerpicture.jpg") %>');">
+<div class="banner home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)), url('<%= image_url("banner.jpg") %>');">
   <div class="container">
     <h1> <strong>These Guys </strong> </h1>
     <p> Disguise for every events </p>
-    <%= link_to "Visit website", costumes_path, class:"btn btn-flat" %>
+    <%= link_to "Voir nos costumes", costumes_path, class:"btn btn-danger" %>
   </div>
 </div>
 
-<h2 class="section-title home-section-title"> Trending now  <a data-scroll="" href="#cards-grid" class="anchor" data-toggle="tooltip" data-placement="top" title="" data-original-title="Copy URL"></a></h2>
+<h2 class="section-title home-section-title"> Recommendations pour Halloween <a data-scroll="" href="#cards-grid" class="anchor" data-toggle="tooltip" data-placement="top" title="" data-original-title="Copy URL"></a></h2>
 <div class="cards home-cards">
 
-  <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-    Breakfast
+  <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url("costume-citrouille-homme.jpg") %>');">
+    Citrouille
   </div>
 
-  <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-    Lunch
+  <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url("costumeclown.jpg") %>');">
+    Clown Tueur
   </div>
 
-  <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-    Dinner
+  <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url("costumevampire.jpg") %>');">
+    Vampire
   </div>
 
-   <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-    Dinner
+   <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url("costumesorciere.jpeg") %>');">
+    Sorcière
   </div>
-
-
-
-
 </div>
+
+<h2 class="section-title home-section-title"> Les plus populaires <a data-scroll="" href="#cards-grid" class="anchor" data-toggle="tooltip" data-placement="top" title="" data-original-title="Copy URL"></a></h2>
+<div class="cards home-cards">
+
+  <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url("deguisementlacasa.jpg") %>');">
+    Série/film
+  </div>
+
+  <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url("deguisementspiderman.jpg") %>');">
+    Super-héro
+  </div>
+
+  <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url("deguisementgonflable.jpg") %>');">
+    Gonflable
+  </div>
+
+   <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url("deguisementsexy.jpg") %>');">
+    Sexy
+  </div>
+</div>
+
+
 
 <div class="footer">
   <div class="footer-links">

@@ -46,7 +46,7 @@
 }
 
 .card-category {
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   height: 180px;
   display: flex;
@@ -62,8 +62,9 @@
 
 .card-category.home-card-category {
   background-size: cover;
-  background-position: center;
-  height: 180px;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
