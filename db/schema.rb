@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_19_141509) do
+ActiveRecord::Schema.define(version: 2019_03_21_162313) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2019_03_19_141509) do
     t.bigint "costume_id"
     t.integer "total_price"
     t.text "message"
-    t.string "status"
+    t.string "status", default: "En attente"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["costume_id"], name: "index_bookings_on_costume_id"
@@ -37,6 +37,8 @@ ActiveRecord::Schema.define(version: 2019_03_19_141509) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "users_id"
+    t.string "size"
+    t.string "state"
     t.index ["owner_id"], name: "index_costumes_on_owner_id"
     t.index ["users_id"], name: "index_costumes_on_users_id"
   end
@@ -54,6 +56,8 @@ ActiveRecord::Schema.define(version: 2019_03_19_141509) do
     t.string "last_name"
     t.string "address"
     t.string "photo"
+    t.text "description"
+    t.string "rating"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
