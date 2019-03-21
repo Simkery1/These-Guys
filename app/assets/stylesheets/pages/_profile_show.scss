@@ -43,6 +43,9 @@
   max-height:100%;
 }
 
+.notes {
+  display: flex;
+}
 .card-container {
   background-color: white;
   padding: 16px;
@@ -57,4 +60,10 @@
 .onglet {
   margin-top: 8px;
   margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  align-item: right;
 }
