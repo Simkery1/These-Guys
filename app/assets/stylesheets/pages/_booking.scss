@@ -7,8 +7,20 @@
   align-items: center;
 }
 
-.card-product-infos {
-  align-items: center;
-  display:flex;
+
+.owner-booking {
+  border: 1px black solid;
+  width: 150px;
+  padding: 5px;
+  margin: 2px;
 }
 
+.booking-demande-bouton {
+  flex: 1 0 auto;
+  justify-content: center;
+}
+
+
+.booking-photo {
+  padding: 5px;
+}
