@@ -1,7 +1,7 @@
 <div class="container">
   <div class="costume-show">
     <div class ="costume-picture">
-      <p><%= cl_image_tag @costume.photo, height: 600, width: 350, crop: :fill %> </p>
+      <p><%= cl_image_tag @costume.photo, height: 500, width: 350, crop: :fill %> </p>
     </div>
 
     <div class="costume-details">
@@ -14,24 +14,33 @@
 
       <div class="costume-informations">
         <p>Taille : unique</p>
-        <p></p>
-        <br>
-        <br>
-        <br>
-        <p id="Disponibilité"> Disponibilité :  </p>
+
+      </div>
+
+      <div class="container">
+        <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+          <h3>When do you want These Guys</h3>
+
+          <%= simple_form_for :search, method: "get" do |f| %>
+            <%= f.input :de, as: :string, required: false, input_html: {class: "datepicker"} %>
+            <%= f.input :A, as: :string, required: false, input_html: {class: "datepicker"} %>
+            <%= f.button :submit, "Go", class: "btn btn-primary" %>
+          <% end %>
+        </div>
       </div>
 
 
       <div class="costume-ranking">
         <div class="owner-informations-show">
-        <p>Owner Name</p>
-        <p>Owner ranking seed</p>
+          <p> <%= "Owner : #{@costume.owner.first_name} #{@costume.owner.first_name}"%>
+        </div>
+        <div class="ranking_show">
+             <p>Owner ranking seed</p>
         </div>
         <div class="upload-button">
          <%= link_to "Book now!", bookings_path, class:"btn btn-danger" %>
         </div>
       </div>
-
     </div>
   </div>
 </div>

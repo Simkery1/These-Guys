@@ -5,7 +5,7 @@
   align-item: center;
   border: 1px solid black;
   border-radius:10px;
-  padding: 10px;
+  padding: 10px auto;
   margin-top: 20px;
   background-color: white;
 }
@@ -17,7 +17,7 @@
 
 .costume-details {
   margin-top: 70px;
-  height:  600px;
+  height:  100%;
   display: flex;
   flex-direction: column;
   margin-left: 60px;
@@ -33,13 +33,13 @@ justify-content: space-between;
 
 .costume-informations {
   margin-top: 80px;
-  height: 200px;
   border-top: 2px solid grey;
 
 }
 .costume-ranking {
-  height: 200px;
+  height: 100%;
   border-top: 2px solid grey;
+  margin-top: 40px;
 
 }
 
@@ -57,11 +57,12 @@ justify-content: space-between;
 }
 
 .costume-informations-show {
-
+  display: flex;
+ justify-content: space-around
 }
 
 .upload-button {
-  margin-top: 100px;
+  margin-top: 10px;
   display:flex;
   justify-content: flex-end;
 
