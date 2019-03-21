@@ -1,21 +1,18 @@
 <div class="booking-screen">
-<% @bookings.each do |booking| %>
-  <div class="card-product">
-    <%= cl_image_tag booking.costume.photo, alt: "Photo costume", height: 100, crop: :fill %>
-      <div class="card-product-infos">
-        <h2><%= booking.costume.name %></h2>
-        <p><%= booking.message%></p>
+  <%= link_to "Mes costumes", root_path, class:"btn btn-danger btn-sm my-booking"%>
+    <% @bookings.each do |booking| %>
+      <div class="card-product">
+        <div class ="booking-photo"><%= cl_image_tag booking.costume.photo, alt: "Photo costume", height: 100, crop: :fill %></div>
+         <div><h3><%= booking.locataire.last_name %></h3>
+         <h2><%= booking.locataire.first_name %></h2></div>
+
+        <div><h4><%= booking.costume.name %></h4><p><%= booking.message%></p></div>
+        <div class="booking-price" style="text-align: right; color: black;"> <h2>Total location </h2><p style="font-size: x-large; text-align: center;"><%= booking.total_price %>€</p></div>
+        <div class="booking-demand-bouton">
+          <div class="booking-status" style="padding-left: 50px; align-items: center; color: black;"><p><%= booking.status %></p></div>
+          <div><%= link_to "Accepter", accept_owner_booking_path(booking), class: "btn btn-succes owner-booking", method: :patch %></div>
+          <div><%= link_to "Refuser", decline_owner_booking_path(booking), class: "btn btn-succes owner-booking", method: :patch %></div>
+        </div>
       </div>
-      <div class="booking">
-        <p><%= booking.status %></p>
-        <%= link_to accept_owner_booking_path(booking), method: :patch do  %>
-        <div class="booking-btn" style="background-image: url('<%= image_url("validation.png") %>');"></div>
-      <% end %>
-      <%= link_to decline_owner_booking_path(booking), method: :patch do %>
-        <div class="booking-btn" style="background-image: url('<%= image_url("cross.png") %>');"></div>
-      <% end %>
-      </div>
-  </div>
-<% end %>
-<%= link_to "Accueil", root_path, class:"btn btn-flat" %>
+    <% end %>
 </div>

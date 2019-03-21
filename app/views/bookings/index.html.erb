@@ -1,19 +1,14 @@
-<div class="booking-container">
-  <div class="booking-screen">
-    <%= link_to "Mes costumes", root_path, class:"btn btn-danger btn-sm my-booking" %>
-        <div class="card-product">
-            <div class="row">
-          <% @bookings.each do |booking| %>
-              <%= cl_image_tag booking.costume.photo, alt: "Photo costume", height: 100, crop: :fill %>
-                <div class="card-product-infos">
-                   <h2><%= booking.costume.name %></h2>
-                   <p><%= booking.message%></p>
-                </div>
-                <div class="booking">
-                  <p><%= booking.status %></p>
-                </div>
-        </div>
+<<div class="booking-screen">
+  <%= link_to "Mes costumes", root_path, class:"btn btn-danger btn-sm my-booking"%>
+    <% @bookings.each do |booking| %>
+      <div class="card-product">
+        <div class ="booking-photo"><%= cl_image_tag booking.costume.photo, alt: "Photo costume", height: 100, crop: :fill %></div>
+         <div><h3><%= booking.costume.owner.user_name %></h3></div>
+
+        <div><h4><%= booking.costume.name %></h4><p><%= booking.message%></p></div>
+        <div class="booking-price" style="text-align: right; color: black;"> <h2>Total location </h2><p style="font-size: x-large; text-align: center;"><%= booking.total_price %>€</p></div>
+          <div class="booking-status" style="padding-left: 50px; align-items: center; color: black;"><h2 style="padding-right: 40px;"><strong><%= booking.status %></strong></h2 style="padding-right: 40px;"></div>
+      </div>
     <% end %>
-  </div>
 </div>
 
