@@ -19,7 +19,8 @@
 
       <div class="container">
         <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
-          <h3>When do you want These Guys</h3>
+          <h3>Choisissez vos dates de location</h3>
+
 
           <%= simple_form_for [@costume, @booking] do |f| %>
           <div class="form-inputs">
@@ -28,6 +29,7 @@
              label: 'date de fin'  %>
              <%= f.submit 'Réservation', class:"btn btn-danger"%>
           </div>
+
           <% end %>
         </div>
       </div>
@@ -35,7 +37,7 @@
 
       <div class="costume-ranking">
         <div class="owner-informations-show">
-          <p> <%= "Owner : #{@costume.owner.first_name} #{@costume.owner.last_name}"%>
+          <p> <%= "Propriétaire : #{@costume.owner.first_name} #{@costume.owner.last_name}"%>
         </div>
         <div class="ranking_show">
           <p> <%= "Note : #{@costume.owner.rating}"%></p>
