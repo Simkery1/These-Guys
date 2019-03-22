@@ -1,16 +1,26 @@
-<div>
-  <%= simple_form_for [:owner, @costume] do |f| %>
-  <%= f.input :name, label: 'Costume name' %>
+<h1 class="titre-owner-costume"> Ajouter un costume</h1>
 
-  <%= f.input :description, as: :text %>
-  <%= f.input :price_per_day %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <%= cl_image_tag @costume.photo, height: 300, width: 400, crop: :fill %>
+<div class="owner-costume-new">
+  <%= simple_form_for [:owner, @costume], input_html: {class: "new-costume"} do |f| %>
+  <div class="row">
+    <div class="col-sm-6 owner-costume-information">
+    <%= f.input :name, label: 'Nom du costume' %>
+    <%= f.input :description, as: :text %>
+    <%= f.input :price_per_day, label: "Prix par jour" %>
+  </div>
+    <div class="col-sm-6 owner-costume-photo">
+    <%= f.input :photo_cache, as: :hidden %>
+    <%= cl_image_tag @costume.photo, height: 300, width: 400, crop: :fill %>
+    <%= f.input :photo %>
+  </div>
 
 
-  <%= f.button :submit, :class => "primary pull-left" %>
-  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
-  <% end %>
+</div>
+  <div class="owner-costume-submit">
+    <%= f.button :submit, "Ajouter ce costume", class:"btn btn-danger" %>
+    <%= f.button :button, "Annuler", type: "reset" %>
+    <% end %>
+  </div>
+
 
 </div>

@@ -13,9 +13,12 @@ class Owner::CostumesController < ApplicationController
   end
 
   def create
-    @costume = Costume.create(costume_params)
-    @costume.save
-    redirect_to owner_costumes_path
+    @costume = Costume.new(costume_params)
+    @costume.owner = current_user
+    if @costume.save
+      redirect_to profile_path
+    else
+      render :new
+    end
   end
-
 end
