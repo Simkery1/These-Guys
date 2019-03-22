@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   # as owner
   namespace :owner do
-    resources :costumes, only: [:index, :new, :create]
+    resources :costumes, only: [:index, :new, :create, :show]
 
     resources :bookings, only: [:index] do
       member do
