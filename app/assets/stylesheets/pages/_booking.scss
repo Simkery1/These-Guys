@@ -4,13 +4,29 @@
 
 }
 
-.owner-booking {
+.owner-booking-accepted {
   display: flex;
-  border: 1px black solid;
-  width: 150px;
+  border: 1px #62C147 solid;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   padding: 5px;
   margin: 2px;
- justify-content: center;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.owner-booking-decline {
+  display: flex;
+  border: 1px #ED2D2D solid;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 2px;
+  justify-content: center;
+  align-items: center;
 }
 
 .booking-demande {
@@ -21,7 +37,7 @@
 
 .booking-demande-bouton {
   flex: 1 0 20%;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .booking-photo {
@@ -49,4 +65,37 @@
   display: flex;
   flex: 0 0 10%;
   padding-top: 5px;
+}
+
+.status-pending {
+  color: black;
+}
+
+.status-declined {
+  color: #ED2D2D;
+}
+
+.status-accepted {
+  color: #62C147;
+}
+
+.button-direction {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.button-details {
+  background-color: white;
+  color: #F28F4B;
+  text-align: left;
+}
+
+#text-message {
+  font-size: 15px;
+}
+
+.booking-photo {
+  background-size: contain;
 }

@@ -27,7 +27,23 @@
 }
 
 .btn-danger:hover {
- background: #ef5e30;
- color: white;
+ color: #ef5e30;
 }
 
+.owner-booking-accepted {
+  color: #62C147;
+}
+
+.owner-booking-decline {
+ color: #ED2D2D;
+}
+
+.owner-booking-accepted:hover {
+  color: white;
+  background-color: #62C147;
+}
+
+.owner-booking-decline:hover {
+  color: white;
+ background-color: #ED2D2D;
+}

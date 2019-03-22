@@ -1,5 +1,5 @@
 <div class="booking-screen">
-  <%= link_to "Mes costumes", root_path, class:"btn btn-danger btn-sm my-booking"%>
+  <%= link_to "Mes costumes", owner_bookings_path, class:"btn btn-danger btn-sm my-booking"%>
     <% @bookings.each do |booking| %>
       <div class="card-product">
         <div class ="booking-photo"><%= cl_image_tag booking.costume.photo, alt: "Photo costume", height: 100, crop: :fill, gravity: :north %></div>
@@ -12,6 +12,11 @@
               <h4><%= booking.costume.name %></h4>
               <p><%= booking.message %></p>
             </div>
+            <div>
+                <%= link_to owner_costume_path, class:"btn btn-succes button-details" do %>
+                <i class="fas fa-plus"></i>
+                <% end %>
+            </div>
           </div>
 
           <div class="booking-price" style="text-align: right; color: black;">
@@ -21,7 +26,8 @@
             </div>
           </div>
           <div class="booking-demand">
-            <div class="booking-status" style="padding-left: 0px; align-items: center; color: black;"><h2 style="padding-right: 30px; "><strong><%= booking.status %></strong></div>
+            <div class="booking-status <%= status_color(booking.status) %>" style="padding-left: 0px; align-items: center;">
+              <h2 style="padding-right: 30px;"><strong><%= booking.status %></strong></div>
               <div class = "booking-date">
             <div><h2><%= booking.start_date %></h2>
             <h2><%= booking.end_date %></h2></div>
