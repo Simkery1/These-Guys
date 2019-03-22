@@ -22,4 +22,9 @@ class CostumesController < ApplicationController
     @costume = Costume.create(costume_params)
   end
 
+  def destroy
+    @costume = Costume.find(params[:id])
+    @costume.destroy
+    redirect_to profile_path
+  end
 end

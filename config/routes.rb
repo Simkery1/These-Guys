@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   # as locataire
-  resources :costumes, only: [:index, :show] do
+  resources :costumes, only: [:index, :show, :destroy] do
     resources :bookings, only: [:new, :create]
   end
 
