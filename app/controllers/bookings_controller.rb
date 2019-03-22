@@ -14,12 +14,15 @@ class BookingsController < ApplicationController
   def create
     @costume = Costume.find(params[:costume_id])
     @booking = Booking.new(booking_params)
+    @booking.costume = @costume
     @booking.total_price = (@booking.end_date - @booking.start_date).to_i * @costume.price_per_day
     @booking.locataire = current_user
-    @booking.save
-    redirect_to bookings_path
+    if @booking.save
+      redirect_to bookings_path
+    else
+      render :new
+    end
   end
-
   private
 
   def booking_params
