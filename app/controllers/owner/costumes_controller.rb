@@ -5,7 +5,7 @@ class Owner::CostumesController < ApplicationController
   end
 
   def costume_params
-  params.require(:costume).permit(:photo, :name, :description, :price_per_day)
+    params.require(:costume).permit(:photo, :name, :description, :price_per_day)
   end
 
   def new
@@ -21,4 +21,5 @@ class Owner::CostumesController < ApplicationController
       render :new
     end
   end
+
 end
