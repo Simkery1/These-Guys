@@ -1,26 +1,52 @@
 .booking-screen {
   width: 80vw;
   margin: 24px auto;
-}
 
-.booking-container {
-  align-items: center;
 }
-
 
 .owner-booking {
+  display: flex;
   border: 1px black solid;
   width: 150px;
   padding: 5px;
   margin: 2px;
+ justify-content: center;
+}
+
+.booking-demande {
+  flex: 1 0 15%;
+  justify-content: space-around;
+
 }
 
 .booking-demande-bouton {
-  flex: 1 0 auto;
-  justify-content: center;
+  flex: 1 0 20%;
+  justify-content: space-around;
 }
-
 
 .booking-photo {
   padding: 5px;
+  background: cover;
+}
+
+.booking-costume-name {
+  display:flex;
+  flex: 0 0 50%;
+}
+
+.booking-locataire-name {
+  display: flex;
+  flex: 0 0 10%;
+  justify-content: center;
+}
+
+.booking-price {
+  display: flex;
+  flex: 0 0 10%;
+}
+
+.booking-date {
+  display: flex;
+  flex: 0 0 10%;
+  padding-top: 5px;
 }

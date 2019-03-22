@@ -6,8 +6,9 @@ class BookingsController < ApplicationController
   end
 
   def new
-    # @booking = Booking.new
-    # redirect_to current_user.bookings
+
+    @booking = Booking.new
+    redirect_to booking_path
   end
 
   def create

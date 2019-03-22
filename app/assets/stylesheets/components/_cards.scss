@@ -1,4 +1,4 @@
-.cards {
+.cards.home-cards {
   display: grid;
   flex-wrap: wrap;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -46,9 +46,10 @@
   margin-top: 10px;
 }
 
-.card-category {
+.card-category.home-card-category {
   background-size: contain;
   background-position: center;
+  background-position: top;
   height: 180px;
   display: flex;
   justify-content: center;
@@ -77,6 +78,8 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
 }
+
+
 
 .home-section-title {
   margin-top: 20px;

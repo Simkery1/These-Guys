@@ -12,4 +12,14 @@ class CostumesController < ApplicationController
     @costume = Costume.find(params[:id])
     @booking = Booking.new
   end
+
+  def new
+    @costume = Costume.new
+    redirect_to profile_path.bookings
+  end
+
+  def create
+    @costume = Costume.create(costume_params)
+  end
+
 end

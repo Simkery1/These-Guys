@@ -6,13 +6,13 @@ class Owner::BookingsController < ApplicationController
   end
 
   def accept
-    @booking.status = "accepted"
+    @booking.status = "Accepté"
     @booking.save
     redirect_to owner_bookings_path
   end
 
   def decline
-    @booking.status = "declined"
+    @booking.status = "Refusé"
     @booking.save
     redirect_to owner_bookings_path
   end
