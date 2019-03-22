@@ -12,7 +12,7 @@ h1 {
 margin: 20px;
 }
 
-.card_index{
+.card_index {
   padding: 20px;
 }
 .card_link {
@@ -89,8 +89,9 @@ margin: 20px;
   margin-bottom: 20px;
 }
 .card-trip {
+  margin-top: 20px;
   margin: 20px;
-  padding: 10px auto;
+  padding: 10px 20px;
   display: flex;
   overflow: hidden;
   background: white;
@@ -113,6 +114,7 @@ margin: 20px;
   font-size: 12px;
   opacity: .7;
   margin: 0;
+   text-align: center;
 }
 
 .detail_description {

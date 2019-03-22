@@ -1,8 +1,11 @@
+p {
+  text-align: justify;
+}
+
 .costume-show {
   display: flex;
-  flex-wrap: wrap;
+  padding-top: 20px;
   justify-content: center;
-  align-item: center;
   border: 1px solid black;
   border-radius:10px;
   padding: 10px auto;
@@ -11,8 +14,7 @@
 }
 
 .costume-picture {
-  height:  600px;
-
+  flex: 0 0 40%;
 }
 
 .costume-details {
@@ -20,7 +22,9 @@
   height:  100%;
   display: flex;
   flex-direction: column;
-  margin-left: 60px;
+  margin-left: 40px;
+  margin-right: 40px;
+  flex: 0 0 40%;
 }
 
 .name-price {
@@ -63,6 +67,7 @@ justify-content: space-between;
 
 .upload-button {
   margin-top: 10px;
+  margin-bottom: 20px;
   display:flex;
   justify-content: flex-end;
 

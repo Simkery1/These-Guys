@@ -1,7 +1,7 @@
 <div class="container">
   <div class="costume-show">
     <div class ="costume-picture">
-      <p><%= cl_image_tag @costume.photo, height: 500, width: 350, crop: :fill %> </p>
+      <p><%= cl_image_tag @costume.photo, height: 700, gravity: :north, width: 500, crop: :fill %> </p>
     </div>
 
     <div class="costume-details">
@@ -32,10 +32,10 @@
 
       <div class="costume-ranking">
         <div class="owner-informations-show">
-          <p> <%= "Owner : #{@costume.owner.first_name} #{@costume.owner.first_name}"%>
+          <p> <%= "Owner : #{@costume.owner.first_name} #{@costume.owner.last_name}"%>
         </div>
         <div class="ranking_show">
-             <p>Owner ranking seed</p>
+             <p><%= "Note : #{@costume.owner.rating}" %></p>
         </div>
         <div class="upload-button">
          <%= link_to "Book now!", bookings_path, class:"btn btn-danger" %>
