@@ -1,20 +1,25 @@
 <div class="container">
   <div class="profile-container">
-    <div class="profile-info">
-      <div class="profile-avatar">
-        <%= cl_image_tag current_user.photo, class: "avatar-bordered-large" %>
-      </div>
-      <div class="profile-name">
-        <h1><%= current_user.user_name %></h1>
-      </div>
-      <div class="notes">
-        <h3>Note : <%= current_user.rating %></h3>
+    <div class="container">
+      <div class="card hovercard">
+        <div class="cardheader"></div>
+        <div class="profile-card-avatar">
+          <%= cl_image_tag current_user.photo %>
+        </div>
+        <div class="info">
+            <div class="title">
+              <h3><%= current_user.user_name %></h3>
+            </div>
+            <div class="desc"><%= current_user.address %></div>
+            <div class="desc">Note : <%= current_user.rating %></div>
+        </div>
       </div>
     </div>
 
     <div class="profile-details">
       <div class="profile-description">
         <div class= "profile-text">
+          <h3>Quelques mots sur moi</h3>
           <%= current_user.description %>
         </div>
       </div>
@@ -39,7 +44,7 @@
                    </div>
                    <div class="card-details">
                      <div class="size">
-                       <h2> <%= 'size : 16' %></h2>
+                       <h2> Taille : <%= costume.size %></h2>
                      </div>
                    </div>
                  </div>
@@ -51,6 +56,4 @@
     </div>
   </div>
 </div>
-
-
 
