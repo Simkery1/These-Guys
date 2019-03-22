@@ -23,9 +23,7 @@
         <div class="ranking_show">
              <p><%= "Note : #{@costume.owner.rating}" %></p>
         </div>
-        <div class="upload-button">
-         <%= link_to "Book now!", bookings_path, class:"btn btn-danger" %>
-        </div>
+        <%= link_to "Supprimer", costume_path(@costume), method: :delete, class:"btn btn-danger" %>
       </div>
     </div>
   </div>
