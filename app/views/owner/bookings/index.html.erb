@@ -2,17 +2,29 @@
   <%= link_to "Mes costumes", root_path, class:"btn btn-danger btn-sm my-booking"%>
     <% @bookings.each do |booking| %>
       <div class="card-product">
-        <div class ="booking-photo"><%= cl_image_tag booking.costume.photo, alt: "Photo costume", height: 100, crop: :fill %></div>
-         <div><h3><%= booking.locataire.last_name %></h3>
-         <h2><%= booking.locataire.first_name %></h2></div>
+        <div class ="booking-photo"><%= cl_image_tag booking.costume.photo, alt: "Photo costume", height: 100, crop: :fill, gravity: :north %></div>
+          <div class="booking-locataire-name">
+            <div><h3><%= booking.locataire.last_name %></h3>
+            <h2><%= booking.locataire.first_name %></h2></div>
+          </div>
 
-        <div><h4><%= booking.costume.name %></h4><p><%= booking.message%></p></div>
-        <div class="booking-price" style="text-align: right; color: black;"> <h2>Total location </h2><p style="font-size: x-large; text-align: center;"><%= booking.total_price %>€</p></div>
-        <div class="booking-demand-bouton">
-          <div class="booking-status" style="padding-left: 50px; align-items: center; color: black;"><p><%= booking.status %></p></div>
-          <div><%= link_to "Accepter", accept_owner_booking_path(booking), class: "btn btn-succes owner-booking", method: :patch %></div>
-          <div><%= link_to "Refuser", decline_owner_booking_path(booking), class: "btn btn-succes owner-booking", method: :patch %></div>
+          <div class="booking-costume-name">
+            <div>
+              <h4><%= booking.costume.name %></h4>
+              <p><%= booking.message %></p>
+            </div>
+          </div>
+          <div class="booking-price" style="text-align: right; color: black;">
+            <div>
+            <h2>Total location </h2>
+            <p style="font-size: x-large; text-align: center;"><%= booking.total_price %>€</p>
+          </div>
+          </div>
+          <div class="booking-demand-bouton" style="padding-bottom: 15px;">
+            <div class="booking-status" style="padding-left: 50px; align-items: center; color: black;"><p><%= booking.status %></p></div>
+            <div><%= link_to "Accepter", accept_owner_booking_path(booking), class: "btn btn-succes owner-booking", method: :patch %></div>
+            <div><%= link_to "Refuser", decline_owner_booking_path(booking), class: "btn btn-succes owner-booking", method: :patch %></div>
+          </div>
         </div>
-      </div>
     <% end %>
 </div>
