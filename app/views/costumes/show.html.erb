@@ -19,12 +19,12 @@
 
       <div class="container">
         <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
-          <h3>When do you want These Guys</h3>
+          <h3>Choisissez vos dates de location</h3>
 
           <%= simple_form_for :search, method: "get" do |f| %>
             <%= f.input :de, as: :string, required: false, input_html: {class: "datepicker"} %>
             <%= f.input :A, as: :string, required: false, input_html: {class: "datepicker"} %>
-            <%= f.button :submit, "Go", class: "btn btn-primary" %>
+            <%= f.button :submit, "Reservez !", class:"btn btn-danger" %>
           <% end %>
         </div>
       </div>
@@ -32,7 +32,7 @@
 
       <div class="costume-ranking">
         <div class="owner-informations-show">
-          <p> <%= "Owner : #{@costume.owner.first_name} #{@costume.owner.last_name}"%>
+          <p> <%= "Propriétaire : #{@costume.owner.first_name} #{@costume.owner.last_name}"%>
         </div>
         <div class="ranking_show">
              <p><%= "Note : #{@costume.owner.rating}" %></p>
