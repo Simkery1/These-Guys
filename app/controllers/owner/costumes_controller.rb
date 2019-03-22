@@ -12,6 +12,10 @@ class Owner::CostumesController < ApplicationController
     @costume = Costume.new
   end
 
+  def show
+    @costume = Costume.find(params[:id])
+  end
+
   def create
     @costume = Costume.new(costume_params)
     @costume.owner = current_user
