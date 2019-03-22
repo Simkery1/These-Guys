@@ -22,5 +22,4 @@ class Owner::CostumesController < ApplicationController
     end
   end
 
-
 end

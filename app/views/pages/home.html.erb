@@ -9,41 +9,56 @@
 <h2 class="section-title home-section-title"> Recommendations pour Halloween <a data-scroll="" href="#cards-grid" class="anchor" data-toggle="tooltip" data-placement="top" title="" data-original-title="Copy URL"></a></h2>
 <div class="cards home-cards">
 
-  <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url("costume-citrouille-homme.jpg") %>');">
-    Citrouille
-  </div>
+    <%= link_to costumes_path, class: 'card_link' do %>
+      <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url("costume-citrouille-homme.jpg") %>');">
+        Citrouille
+      </div>
+    <% end %>
+    <%= link_to costumes_path, class: 'card_link' do %>
+      <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url("costumeclown.jpg") %>');">
+        Clown Tueur
+      </div>
+      <% end %>
+    <%= link_to costumes_path, class: 'card_link' do %>
+      <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url("costumevampire.jpg") %>');">
+        Vampire
+      </div>
+      <% end %>
+    <%= link_to costumes_path, class: 'card_link' do %>
+       <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url("costumesorciere.jpeg") %>');">
+        Sorcière
+      </div>
+      <% end %>
+    </div>
 
-  <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url("costumeclown.jpg") %>');">
-    Clown Tueur
-  </div>
-
-  <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url("costumevampire.jpg") %>');">
-    Vampire
-  </div>
-
-   <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url("costumesorciere.jpeg") %>');">
-    Sorcière
-  </div>
-</div>
 
 <h2 class="section-title home-section-title"> Les plus populaires <a data-scroll="" href="#cards-grid" class="anchor" data-toggle="tooltip" data-placement="top" title="" data-original-title="Copy URL"></a></h2>
 <div class="cards home-cards">
 
+  <%= link_to costumes_path, class: 'card_link' do %>
   <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url("deguisementlacasa.jpg") %>');">
-    Série/film
+  Série/Film
   </div>
+   <% end %>
 
+  <%= link_to costumes_path, class: 'card_link' do %>
   <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url("deguisementspiderman.jpg") %>');">
     Super-héro
   </div>
+   <% end %>
 
+  <%= link_to costumes_path, class: 'card_link' do %>
   <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url("deguisementgonflable.jpg") %>');">
     Gonflable
   </div>
+   <% end %>
 
+
+  <%= link_to costumes_path, class: 'card_link' do %>
    <div class="card-category home-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_url("deguisementsexy.jpg") %>');">
     Sexy
   </div>
+   <% end %>
 </div>
 
 
