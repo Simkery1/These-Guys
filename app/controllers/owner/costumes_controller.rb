@@ -5,7 +5,7 @@ class Owner::CostumesController < ApplicationController
   end
 
   def costume_params
-  params.require(:costume).permit(:photo, :name, :description, :price_per_day)
+    params.require(:costume).permit(:photo, :name, :description, :price_per_day)
   end
 
   def new
@@ -13,9 +13,14 @@ class Owner::CostumesController < ApplicationController
   end
 
   def create
-    @costume = Costume.create(costume_params)
-    @costume.save
-    redirect_to owner_costumes_path
+    @costume = Costume.new(costume_params)
+    @costume.owner = current_user
+    if @costume.save
+      redirect_to profile_path
+    else
+      render :new
+    end
   end
+
 
 end
