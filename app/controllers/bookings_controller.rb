@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    redirect_to current_user.bookings
+    redirect_to booking_path
   end
 
   def create
