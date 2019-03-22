@@ -21,5 +21,4 @@ class Owner::CostumesController < ApplicationController
       render :new
     end
   end
-
 end

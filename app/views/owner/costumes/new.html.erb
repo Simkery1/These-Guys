@@ -6,6 +6,7 @@
     <div class="col-sm-6 owner-costume-information">
     <%= f.input :name, label: 'Nom du costume' %>
     <%= f.input :description, as: :text %>
+    <%= f.input :size, label: 'Taille', collection: ['enfant', 'adulte'], as: :radio_buttons %>
     <%= f.input :price_per_day, label: "Prix par jour" %>
   </div>
     <div class="col-sm-6 owner-costume-photo">
