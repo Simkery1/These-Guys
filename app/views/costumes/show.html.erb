@@ -1,7 +1,7 @@
 <div class="container">
   <div class="costume-show">
     <div class ="costume-picture">
-      <p><%= cl_image_tag @costume.photo, height: 700, gravity: :north, width: 500, crop: :fill %> </p>
+      <p><%= cl_image_tag @costume.photo, height: 660, gravity: :north, width: 520, crop: :fill %> </p>
     </div>
 
     <div class="costume-details">
@@ -21,10 +21,13 @@
         <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
           <h3>When do you want These Guys</h3>
 
-          <%= simple_form_for :search, method: "get" do |f| %>
-            <%= f.input :de, as: :string, required: false, input_html: {class: "datepicker"} %>
-            <%= f.input :A, as: :string, required: false, input_html: {class: "datepicker"} %>
-            <%= f.button :submit, "Go", class: "btn btn-primary" %>
+          <%= simple_form_for [@costume, @booking] do |f| %>
+          <div class="form-inputs">
+            <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"}, label: 'date de début' %>
+            <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"},
+             label: 'date de fin'  %>
+             <%= f.submit 'Réservation', class:"btn btn-danger"%>
+          </div>
           <% end %>
         </div>
       </div>
@@ -35,10 +38,7 @@
           <p> <%= "Owner : #{@costume.owner.first_name} #{@costume.owner.last_name}"%>
         </div>
         <div class="ranking_show">
-             <p><%= "Note : #{@costume.owner.rating}" %></p>
-        </div>
-        <div class="upload-button">
-         <%= link_to "Book now!", bookings_path, class:"btn btn-danger" %>
+          <p> <%= "Note : #{@costume.owner.rating}"%></p>
         </div>
       </div>
     </div>
